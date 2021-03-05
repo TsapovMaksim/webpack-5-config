@@ -1,3 +1,5 @@
+import './styles/index.scss';
+
 const obj1 = {
   geg: 2,
   geg1: 3,
