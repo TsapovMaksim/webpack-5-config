@@ -45,6 +45,11 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'ts-loader'],
+      },
     ],
   },
 
@@ -56,9 +61,9 @@ module.exports = {
     }),
   ],
 
-  // resolve: {
-  //   extensions: ['.js'],
-  // },
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
 
   devServer: {
     contentBase: './dist',
